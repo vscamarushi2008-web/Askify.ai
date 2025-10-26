@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Smart Study Buddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Smart Study Buddy</h1>
+    <h2>"Upload.Ask.Learn"</h2>
+    <p>Upload your Material!!📚</p>
+</header>
+
+<main>
+    <section class="upload-section">
+        <h2>Upload PDFs</h2>
+        <div id="dropzone" class="dropzone">
+            <p>Drag & drop PDFs here or click to browse</p>
+            <input id="fileInput" type="file" accept="application/pdf" multiple />
+            <button id="uploadBtn">Upload Files</button>
+        </div>
+
+        <div class="controls">
+            <button id="resetSessionBtn">Reset Session</button>
+        </div>
+
+        <h3>Uploaded Files</h3>
+        <ul id="fileList" class="file-list">
+            <li class="placeholder">No files uploaded yet</li>
+        </ul>
+    </section>
+
+    <section class="qa-section">
+        <h2>Welcome to Smart Study Buddy!</h2>
+        <p>Upload your PDFs to get started, then ask me anything about your study materials.</p>
+        <ul>
+            <li>Upload multiple PDFs at once</li>
+            <li>Ask questions in natural language</li>
+            <li>Get answers with exact page references</li>
+            <li>Continuous conversation with context memory</li>
+        </ul>
+
+        <div class="ask-row">
+            <label for="questionInput"></label><input id="questionInput" placeholder="Ask Question" />
+            <button id="askBtn">Ask Question</button>
+        </div>
+
+        <div id="processing" class="processing hidden">Processing...</div>
+
+        <div id="answerBox" class="answer-box hidden">
+            <h4>Answer</h4>
+            <div id="answerText"></div>
+        </div>
+    </section>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
